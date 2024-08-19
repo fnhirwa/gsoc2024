@@ -19,7 +19,7 @@ Scaling PyTorch backend and Darts integration
 
 ## Overview
 
-Initial proposal
+Initial proposal description and project goals
 
 ## Work Done
 
