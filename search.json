@@ -18,7 +18,7 @@
     "href": "index.html#overview",
     "title": "GSoC2024",
     "section": "Overview",
-    "text": "Overview\nInitial proposal"
+    "text": "Overview\nInitial proposal description and project goals"
   },
   {
     "objectID": "index.html#work-done",
@@ -40,13 +40,6 @@
     "title": "GSoC2024",
     "section": "References",
     "text": "References"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
   },
   {
     "objectID": "examples/examples.html",
