@@ -4,7 +4,7 @@ project:
 
 website:
   title: "GSoC2024"
-  site-url: "https://fnhirwa.github.io/GSoC2024"
+  site-url: "https://fnhirwa.github.io/gsoc2024"
   description: "GSoC2024 project for sktime"
   page-navigation: true
   navbar:
