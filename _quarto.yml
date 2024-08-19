@@ -1,16 +1,16 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "GSoC2024"
   site-url: "https://fnhirwa.github.io/GSoC2024"
   description: "GSoC2024 project for sktime"
   page-navigation: true
-  output-dir: docs
   navbar:
     search: false
     left:
-      - href: docs/examples.ipynb
+      - href: examples/examples.ipynb
         text: Notebooks Examples
     right:
       - href: https://fnhirwa.github.io
@@ -21,6 +21,7 @@ website:
         href: https://x.com/fnhirwa
       - icon: linkedin
         href: https://www.linkedin.com/in/fnhirwa
+
 format:
   html:
     theme: cosmo

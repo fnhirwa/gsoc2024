@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "examples/examples.html",
+    "href": "examples/examples.html",
+    "title": "Darts Regression Models",
+    "section": "",
+    "text": "def add(x, y):\n    return x + y"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "GSoC2024",
+    "section": "",
+    "text": "Thanks for following this link, I am going to walk you through my GSoC2024 experience and the project that I worked on under sktime organization."
+  },
+  {
+    "objectID": "index.html#project-title",
+    "href": "index.html#project-title",
+    "title": "GSoC2024",
+    "section": "Project Title",
+    "text": "Project Title\nScaling PyTorch backend and Darts integration"
+  },
+  {
+    "objectID": "index.html#overview",
+    "href": "index.html#overview",
+    "title": "GSoC2024",
+    "section": "Overview",
+    "text": "Overview\nInitial proposal"
+  },
+  {
+    "objectID": "index.html#work-done",
+    "href": "index.html#work-done",
+    "title": "GSoC2024",
+    "section": "Work Done",
+    "text": "Work Done\nWith the links to the notebooks"
+  },
+  {
+    "objectID": "index.html#work-left-to-be-done",
+    "href": "index.html#work-left-to-be-done",
+    "title": "GSoC2024",
+    "section": "Work left to be done",
+    "text": "Work left to be done\nDescription of the needed maintianance work, and continuing to contribute to sktime."
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "GSoC2024",
+    "section": "References",
+    "text": "References"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  }
+]
