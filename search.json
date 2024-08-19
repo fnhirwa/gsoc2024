@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "examples/examples.html",
-    "href": "examples/examples.html",
-    "title": "Darts Regression Models",
-    "section": "",
-    "text": "def add(x, y):\n    return x + y"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "GSoC2024",
@@ -54,5 +47,12 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "examples/examples.html",
+    "href": "examples/examples.html",
+    "title": "Darts Regression Models",
+    "section": "",
+    "text": "def add(x, y):\n    return x + y"
   }
 ]

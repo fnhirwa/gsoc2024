@@ -1,8 +1,0 @@
-/* css styles */
-/* Example: Improve readability of notebook outputs */
-.cell-output pre {
-    background-color: #f8f8f8;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 10px;
-}
