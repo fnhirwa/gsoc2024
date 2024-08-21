@@ -44,9 +44,16 @@
   {
     "objectID": "examples/darts_examples.html",
     "href": "examples/darts_examples.html",
-    "title": "Darts Regression Models",
+    "title": "Darts Regression models for time series forecasting using sktime",
     "section": "",
-    "text": "def add(x, y):\n    return x + y"
+    "text": "Open In Colab"
+  },
+  {
+    "objectID": "examples/darts_examples.html#outline",
+    "href": "examples/darts_examples.html#outline",
+    "title": "Darts Regression models for time series forecasting using sktime",
+    "section": "Outline",
+    "text": "Outline\n\nInstalling the required libraries\nLoading the data\nFiting the model\nMaking predictions\nConclusion"
   },
   {
     "objectID": "examples/index.html",
