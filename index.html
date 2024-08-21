@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./examples/examples.html"> 
+    <a class="nav-link" href="./examples"> 
 <span class="menu-text">Notebooks Examples</span></a>
   </li>  
 </ul>
@@ -156,7 +156,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#darts-regression-models-adapter-adapter" id="toc-darts-regression-models-adapter-adapter" class="nav-link" data-scroll-target="#darts-regression-models-adapter-adapter">Darts Regression models adapter adapter</a></li>
   </ul></li>
   <li><a href="#work-left-to-be-done" id="toc-work-left-to-be-done" class="nav-link" data-scroll-target="#work-left-to-be-done">Work left to be done</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 </nav>
     </div>
@@ -167,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Thanks for following this link, I am going to walk you through my GSoC2024 experience and the project that I worked on under <a href="">sktime</a> organization.</p>
+<p>Thanks for following this link, I am going to walk you through my GSoC2024 experience and the project that I worked on under <a href="https://www.sktime.net/en/stable/">sktime</a> organization.</p>
 <section id="project-title" class="level2">
 <h2 class="anchored" data-anchor-id="project-title">Project Title</h2>
 <p>Scaling PyTorch backend and Darts integration</p>
@@ -175,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p><a href="https://www.sktime.net/en/stable/">sktime</a> is a Unified framework for machine learning with time series, that uses an interactive Python interpreter and supports various machine learning tasks including forecasting, time series classification, regression and clustering.</p>
-<p>I spent the whole summer working on the mission of unifying machine learning with time series under the project entitled <strong>Scaling backends, foundation models, PyTorch, darts and pytorch-forecasting with sktime.</strong> Where I mainly worked on integrating the darts Regression models, PyTorch implemented classification models, and deep diving into the structure of deep learning interface of sktime, debugging errors and suggesting improvements to the interface. Despite working on the project mentioned above my contributions went to regural software development lifecycle including the bugs fixing in the repository and improvement of development workflow such as implementing linting standards.</p>
+<p>I spent the whole summer working on the mission of unifying machine learning with time series under the project entitled <strong>Scaling backends, foundation models, PyTorch, darts and pytorch-forecasting with sktime</strong> Where I mainly worked on integrating the darts Regression models, PyTorch implemented classification models, and deep diving into the structure of deep learning interface of sktime, debugging errors and suggesting improvements to the interface. Despite working on the project mentioned above my contributions went to regural software development lifecycle including the bugs fixing in the repository and improvement of development workflow such as implementing linting standards.</p>
 <section id="generally-my-contribution-yielded-the-following-outcomes" class="level3">
 <h3 class="anchored" data-anchor-id="generally-my-contribution-yielded-the-following-outcomes">Generally my contribution yielded the following outcomes</h3>
 <ul>
@@ -223,14 +222,20 @@ ul.task-list li input[type="checkbox"] {
 <p>There was another issue on how darts handles dataset indexes differently from sktime and resolving this took some efforts as I had to implement custom functions to handle such cases.</p>
 <p>This task equiped me with the skill of diving into complex issues ranging from regular implementation to the testing environment.</p></li>
 </ul>
+<p>The examples showcasing the use of darts models with sktime can be found in this <a href="https://fnhirwa.github.io/gsoc2024/examples/darts_examples.html">notebook</a></p>
 </section>
 </section>
 <section id="work-left-to-be-done" class="level2">
 <h2 class="anchored" data-anchor-id="work-left-to-be-done">Work left to be done</h2>
-<p>Description of the needed maintianance work, and continuing to contribute to sktime.</p>
-</section>
-<section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
+<ul>
+<li><strong>Finish GRU-based time series classifiers implementation</strong></li>
+</ul>
+<p>The <a href="https://github.com/sktime/sktime/pull/6952">Pull request</a> is in the last stages to be merged, adding final touches to fix the CI errors being raised on macOS runners.</p>
+<ul>
+<li><strong>Migration of MCNN classifier from <code>sktime-dl</code> to <code>sktime</code></strong></li>
+</ul>
+<p>This <a href="https://github.com/sktime/sktime/pull/6763">Pull Request</a> was put on hold due to the dependency conflict between <code>TensorFlow</code> and <code>pandas</code> as mentioned in this <a href="https://github.com/sktime/sktime/issues/6826">Issue</a>.</p>
+<p>The above mentioned ongoing tasks includes to address the suggested refactor of the deep learning facing classes in sktime, and continous maintainance of impelemented modules to continue the support of open-source. This means that even though my GSoC period is coming to an end I will continue to contribute to the sktime project and interacting with the community.</p>
 
 
 </section>
