@@ -35,6 +35,13 @@
     "text": "Work left to be done\n\nFinish GRU-based time series classifiers implementation\n\nThe Pull request is in the last stages to be merged, adding final touches to fix the CI errors being raised on macOS runners.\n\nMigration of MCNN classifier from sktime-dl to sktime\n\nThis Pull Request was put on hold due to the dependency conflict between TensorFlow and pandas as mentioned in this Issue.\nThe above mentioned ongoing tasks includes to address the suggested refactor of the deep learning facing classes in sktime, and continous maintainance of impelemented modules to continue the support of open-source. This means that even though my GSoC period is coming to an end I will continue to contribute to the sktime project and interacting with the community."
   },
   {
+    "objectID": "index.html#appreciation",
+    "href": "index.html#appreciation",
+    "title": "GSoC2024",
+    "section": "Appreciation",
+    "text": "Appreciation\nFirst and foremost I thank GSoC organizers for the opportunity to enable open-source enthusiast to be involved in development of great freely available tools.\nI would to express my sincere gratitude to my mentors Franz Kiraly, Anirban Ray, and Ugo Onyeka who made it possible to get the project done through day to day communication and continous feedback to my progress.\nI would love to thank my fellow mentees whom we took this challenge together, they all have been helpful and we exchanged ideas throughout the program.\nI thank all the sktime community as whole interacting with everyone on discord improved my way of communicating and asking questions without fear."
+  },
+  {
     "objectID": "examples/darts_examples.html",
     "href": "examples/darts_examples.html",
     "title": "Darts Regression Models",
