@@ -70,3 +70,13 @@ The [Pull request](https://github.com/sktime/sktime/pull/6952) is in the last st
 This [Pull Request](https://github.com/sktime/sktime/pull/6763) was put on hold due to the dependency conflict between `TensorFlow` and `pandas` as mentioned in this [Issue](https://github.com/sktime/sktime/issues/6826).
 
 The above mentioned ongoing tasks includes to address the suggested refactor of the deep learning facing classes in sktime, and continous maintainance of impelemented modules to continue the support of open-source. This means that even though my GSoC period is coming to an end I will continue to contribute to the sktime project and interacting with the community.
+
+## Appreciation
+
+First and foremost I thank GSoC organizers for the opportunity to enable open-source enthusiast to be involved in development of great freely available tools.
+
+I would to express my sincere gratitude to my mentors [Franz Kiraly](https://github.com/fkiraly), [Anirban Ray](https://github.com/yarnabrina), and [Ugo Onyeka](https://github.com/onyekaugochukwu) who made it possible to get the project done through day to day communication and continous feedback to my progress.
+
+I would love to thank my fellow mentees whom we took this challenge together, they all have been helpful and we exchanged ideas throughout the program.
+
+I thank all the sktime community as whole interacting with everyone on discord improved my way of communicating and asking questions without fear.
