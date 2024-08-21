@@ -11,11 +11,20 @@ Scaling PyTorch backend and Darts integration
 
 ## Overview
 
-Initial proposal description and project goals
+[sktime](https://www.sktime.net/en/stable/) is a Unified framework for machine learning with time series, that uses an interactive Python interpreter and supports various machine learning tasks including forecasting, time series classification, regression and clustering.
+
+I spent the whole summer working on the mission of unifying machine learning with time series under the project entitled **Scaling backends, foundation models, PyTorch, darts and pytorch-forecasting with sktime.** Where I mainly worked on integrating the darts Regression models, PyTorch implemented classification models, and deep diving into the structure of deep learning interface of sktime, debugging errors and suggesting improvements to the interface. Despite working on the project mentioned above my contributions went to regural software development lifecycle including the bugs fixing in the repository and improvement of development workflow such as implementing linting standards.
+
+### Generally my contribution yielded the following outcomes
+
+* My community engagement made me learn a lot of new skills, and the team working spirit among the organization led to the successful completion of the project.
+* Communicating with my mentors made me grow on a proffessional level and gave me a taste on how working on impactful project should feel.
+* Solving complex bugs made me take enough time to deep dive into the codebase and gave me a quick understanding of the sktime code base.
+* The whole program boosted personal confidence to the level that I wish to mentor open-source contributors in the future projects.
 
 ## Work Done
 
-With the links to the notebooks
+With the links to the notebooks.
 
 ## Work left to be done
 
