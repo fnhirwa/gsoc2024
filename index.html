@@ -149,8 +149,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
   <li><a href="#generally-my-contribution-yielded-the-following-outcomes" id="toc-generally-my-contribution-yielded-the-following-outcomes" class="nav-link" data-scroll-target="#generally-my-contribution-yielded-the-following-outcomes">Generally my contribution yielded the following outcomes</a></li>
+  <li><a href="#technical-outcomes-of-the-project" id="toc-technical-outcomes-of-the-project" class="nav-link" data-scroll-target="#technical-outcomes-of-the-project">Technical outcomes of the project</a></li>
   </ul></li>
-  <li><a href="#work-done" id="toc-work-done" class="nav-link" data-scroll-target="#work-done">Work Done</a></li>
+  <li><a href="#work-done" id="toc-work-done" class="nav-link" data-scroll-target="#work-done">Work Done</a>
+  <ul class="collapse">
+  <li><a href="#darts-regression-models-adapter-adapter" id="toc-darts-regression-models-adapter-adapter" class="nav-link" data-scroll-target="#darts-regression-models-adapter-adapter">Darts Regression models adapter adapter</a></li>
+  </ul></li>
   <li><a href="#work-left-to-be-done" id="toc-work-left-to-be-done" class="nav-link" data-scroll-target="#work-left-to-be-done">Work left to be done</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -179,12 +183,37 @@ ul.task-list li input[type="checkbox"] {
 <li>Communicating with my mentors made me grow on a proffessional level and gave me a taste on how working on impactful project should feel.</li>
 <li>Solving complex bugs made me take enough time to deep dive into the codebase and gave me a quick understanding of the sktime code base.</li>
 <li>The whole program boosted personal confidence to the level that I wish to mentor open-source contributors in the future projects.</li>
+<li>Learned about a new machine Learning library(darts).</li>
+<li>Continued support for open-source through my contributions.</li>
+</ul>
+</section>
+<section id="technical-outcomes-of-the-project" class="level3">
+<h3 class="anchored" data-anchor-id="technical-outcomes-of-the-project">Technical outcomes of the project</h3>
+<ul>
+<li><p>Completed</p>
+<ul>
+<li>Integration of the darts regression models adapter: <a href="https://github.com/sktime/sktime/pull/6454">Pull Request</a></li>
+</ul></li>
+<li><p>In Progress</p>
+<ul>
+<li>Implementation of GRU-based time series classifiers: <a href="https://github.com/sktime/sktime/pull/6952">Pull Request</a></li>
+<li>Migration of MCNN classifier from <code>sktime-dl</code> to <code>sktime</code>: <a href="https://github.com/sktime/sktime/pull/6763">Pull Request</a></li>
+</ul></li>
 </ul>
 </section>
 </section>
 <section id="work-done" class="level2">
 <h2 class="anchored" data-anchor-id="work-done">Work Done</h2>
-<p>With the links to the notebooks.</p>
+<section id="darts-regression-models-adapter-adapter" class="level3">
+<h3 class="anchored" data-anchor-id="darts-regression-models-adapter-adapter">Darts Regression models adapter adapter</h3>
+<p>With sktime now one can quickly interface the darts library. As mentioned from the darts documentation it provides user-friendly forecasting and anomaly detection on time series through various models, and initially the implementation of the regression models adapter in sktime now gives the capability to interface all available regression models from darts that are: <a href="https://unit8co.github.io/darts/generated_api/darts.models.forecasting.regression_model.html#darts.models.forecasting.regression_model.RegressionModel">RegressionModel</a>, <a href="https://unit8co.github.io/darts/generated_api/darts.models.forecasting.linear_regression_model.html#darts.models.forecasting.linear_regression_model.LinearRegressionModel">LinearRegressionModel</a>, and <a href="https://unit8co.github.io/darts/generated_api/darts.models.forecasting.xgboost.html#darts.models.forecasting.xgboost.XGBModel">XGBModel</a>, yet remaining models <a href="https://unit8co.github.io/darts/generated_api/darts.models.forecasting.lgbm.html#darts.models.forecasting.lgbm.LightGBMModel">LightGBMModel</a>, <a href="https://unit8co.github.io/darts/generated_api/darts.models.forecasting.random_forest.html#darts.models.forecasting.random_forest.RandomForest">RandomForest</a> and <a href="https://unit8co.github.io/darts/generated_api/darts.models.forecasting.catboost_model.html#darts.models.forecasting.catboost_model.CatBoostModel">CatBoostModel</a> needs an implementation classes as the adapter for these models is already implemented.</p>
+<ul>
+<li><p><strong>Challenges and takeaways during implementation</strong></p>
+<p>Getting this pull request merged took a lot of efforts as initially when implementing the adapter there were strange errors on the CI, and handling the dependencies inside <code>sktime</code> was problematic initially. After a thorough investigation the main issue was how sktime installs <code>OSX</code> dependencies on CI and the <a href="https://github.com/sktime/sktime/pull/6926">pull request</a> to resolve this issue which addresses the installation of <code>libomp</code> and setting the compiler flags properly made it possible to test this adapter on macos runners.</p>
+<p>There was another issue on how darts handles dataset indexes differently from sktime and resolving this took some efforts as I had to implement custom functions to handle such cases.</p>
+<p>This task equiped me with the skill of diving into complex issues ranging from regular implementation to the testing environment.</p></li>
+</ul>
+</section>
 </section>
 <section id="work-left-to-be-done" class="level2">
 <h2 class="anchored" data-anchor-id="work-left-to-be-done">Work left to be done</h2>
