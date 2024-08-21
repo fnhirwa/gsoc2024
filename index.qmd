@@ -3,7 +3,7 @@ title: "GSoC2024"
 page-layout: full
 title-block-banner: true
 ---
-Thanks for following this link, I am going to walk you through my GSoC2024 experience and the project that I worked on under [sktime]() organization.
+Thanks for following this link, I am going to walk you through my GSoC2024 experience and the project that I worked on under [sktime](https://www.sktime.net/en/stable/) organization.
 
 ## Project Title
 
@@ -13,7 +13,7 @@ Scaling PyTorch backend and Darts integration
 
 [sktime](https://www.sktime.net/en/stable/) is a Unified framework for machine learning with time series, that uses an interactive Python interpreter and supports various machine learning tasks including forecasting, time series classification, regression and clustering.
 
-I spent the whole summer working on the mission of unifying machine learning with time series under the project entitled **Scaling backends, foundation models, PyTorch, darts and pytorch-forecasting with sktime.** Where I mainly worked on integrating the darts Regression models, PyTorch implemented classification models, and deep diving into the structure of deep learning interface of sktime, debugging errors and suggesting improvements to the interface. Despite working on the project mentioned above my contributions went to regural software development lifecycle including the bugs fixing in the repository and improvement of development workflow such as implementing linting standards.
+I spent the whole summer working on the mission of unifying machine learning with time series under the project entitled **Scaling backends, foundation models, PyTorch, darts and pytorch-forecasting with sktime** Where I mainly worked on integrating the darts Regression models, PyTorch implemented classification models, and deep diving into the structure of deep learning interface of sktime, debugging errors and suggesting improvements to the interface. Despite working on the project mentioned above my contributions went to regural software development lifecycle including the bugs fixing in the repository and improvement of development workflow such as implementing linting standards.
 
 ### Generally my contribution yielded the following outcomes
 
@@ -57,8 +57,16 @@ With sktime now one can quickly interface the darts library. As mentioned from t
 
     This task equiped me with the skill of diving into complex issues ranging from regular implementation to the testing environment.
 
+The examples showcasing the use of darts models with sktime can be found in this [notebook](https://fnhirwa.github.io/gsoc2024/examples/darts_examples.html)
+
 ## Work left to be done
 
-Description of the needed maintianance work, and continuing to contribute to sktime.
+* **Finish GRU-based time series classifiers implementation**
 
-## References
+The [Pull request](https://github.com/sktime/sktime/pull/6952) is in the last stages to be merged, adding final touches to fix the CI errors being raised on macOS runners.
+
+* **Migration of MCNN classifier from `sktime-dl` to `sktime`**
+
+This [Pull Request](https://github.com/sktime/sktime/pull/6763) was put on hold due to the dependency conflict between `TensorFlow` and `pandas` as mentioned in this [Issue](https://github.com/sktime/sktime/issues/6826).
+
+The above mentioned ongoing tasks includes to address the suggested refactor of the deep learning facing classes in sktime, and continous maintainance of impelemented modules to continue the support of open-source. This means that even though my GSoC period is coming to an end I will continue to contribute to the sktime project and interacting with the community.

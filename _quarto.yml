@@ -10,7 +10,7 @@ website:
   navbar:
     search: false
     left:
-      - href: examples/examples.ipynb
+      - href: examples
         text: Notebooks Examples
     right:
       - href: https://fnhirwa.github.io
