@@ -34,6 +34,15 @@ I spent the whole summer working on the mission of unifying machine learning wit
     - Implementation of GRU-based time series classifiers: [Pull Request](https://github.com/sktime/sktime/pull/6952)
     - Migration of MCNN classifier from `sktime-dl` to `sktime`: [Pull Request](https://github.com/sktime/sktime/pull/6763)
 
+* Other Merged Pull Requests
+    - [Fix the colalign functionality to ScipyDist class as specified in the docstrings](https://github.com/sktime/sktime/pull/6110)
+    - [Fix the docs local build failure due to corrupt notebook](https://github.com/sktime/sktime/pull/6426)
+    - [Fix ForecastX when forecaster_X_exogeneous="complement"](https://github.com/sktime/sktime/pull/6433)
+    - [Fix HolidayFeatures crashes if dataframe doesn't contain specified date](https://github.com/sktime/sktime/pull/6550)
+    - [Switch to ruff as linting tool](https://github.com/sktime/sktime/pull/6676)
+    - [Add non-unicode characters check to the linter](https://github.com/sktime/sktime/pull/6807)
+    - [Resolve the issue with diacritics failing to be decoded on Windows](https://github.com/sktime/sktime/pull/6862/files)
+
 ## Work Done
 
 ### Darts Regression models adapter adapter
