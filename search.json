@@ -33,5 +33,19 @@
     "title": "GSoC2024",
     "section": "Work left to be done",
     "text": "Work left to be done\n\nFinish GRU-based time series classifiers implementation\n\nThe Pull request is in the last stages to be merged, adding final touches to fix the CI errors being raised on macOS runners.\n\nMigration of MCNN classifier from sktime-dl to sktime\n\nThis Pull Request was put on hold due to the dependency conflict between TensorFlow and pandas as mentioned in this Issue.\nThe above mentioned ongoing tasks includes to address the suggested refactor of the deep learning facing classes in sktime, and continous maintainance of impelemented modules to continue the support of open-source. This means that even though my GSoC period is coming to an end I will continue to contribute to the sktime project and interacting with the community."
+  },
+  {
+    "objectID": "examples/darts_examples.html",
+    "href": "examples/darts_examples.html",
+    "title": "Darts Regression Models",
+    "section": "",
+    "text": "def add(x, y):\n    return x + y"
+  },
+  {
+    "objectID": "examples/index.html",
+    "href": "examples/index.html",
+    "title": "examples",
+    "section": "",
+    "text": "The example notebooks for newly impelemented features:\n\nDarts Regression Models"
   }
 ]
