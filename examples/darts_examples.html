@@ -172,11 +172,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#installing-the-required-libraries" id="toc-installing-the-required-libraries" class="nav-link" data-scroll-target="#installing-the-required-libraries">Installing the required libraries</a></li>
   <li><a href="#loading-the-data" id="toc-loading-the-data" class="nav-link" data-scroll-target="#loading-the-data">Loading the data</a></li>
-  <li><a href="#fiting-the-model" id="toc-fiting-the-model" class="nav-link" data-scroll-target="#fiting-the-model">Fiting the model</a></li>
+  <li><a href="#fitting-the-model" id="toc-fitting-the-model" class="nav-link" data-scroll-target="#fitting-the-model">Fitting the model</a></li>
   <li><a href="#making-predictions" id="toc-making-predictions" class="nav-link" data-scroll-target="#making-predictions">Making predictions</a></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  <li><a href="#back-to-the-top" id="toc-back-to-the-top" class="nav-link" data-scroll-target="#back-to-the-top">Back to the top</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -191,7 +190,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><a href="https://colab.research.google.com/github/fnhirwa/gsoc2024/blob/main/examples/darts_examples.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" class="img-fluid"></a></p>
 <section id="darts-regression-models-for-time-series-forecasting-using-sktime" class="level1">
 <h1>Darts Regression models for time series forecasting using sktime</h1>
-<p>This notebook demonstrates how to use the <code>sktime</code> interface to use the <code>darts</code> regression models for time series forecasting. We will explore with the current adaptation of the <code>darts</code> models to the <code>sktime</code> interface and how to use them for forecasting.</p>
+<p>This notebook demonstrates how you can simply use the <code>sktime</code> to interface the <code>darts</code> regression models for time series forecasting. We will explore with the current adaptation of the <code>darts</code> models to the <code>sktime</code> interface and how to use them for forecasting.</p>
 <section id="outline" class="level2">
 <h2 class="anchored" data-anchor-id="outline">Outline</h2>
 <ol type="1">
@@ -235,8 +234,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>y_train, y_test, X_train, X_test <span class="op">=</span> temporal_train_test_split(y, X, test_size<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="fiting-the-model" class="level3">
-<h3 class="anchored" data-anchor-id="fiting-the-model">Fiting the model</h3>
+<section id="fitting-the-model" class="level3">
+<h3 class="anchored" data-anchor-id="fitting-the-model">Fitting the model</h3>
 <section id="defining-the-models" class="level4">
 <h4 class="anchored" data-anchor-id="defining-the-models">Defining the models</h4>
 <div id="cell-10" class="cell" data-execution_count="4">
@@ -273,10 +272,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="fitting-models-to-load_longley-dataset" class="level4">
 <h4 class="anchored" data-anchor-id="fitting-models-to-load_longley-dataset">Fitting models to load_longley dataset</h4>
 <div id="cell-12" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fitting the models</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dartslr.fit(y_train, fh<span class="op">=</span>fh)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dartsr.fit(y_train, fh<span class="op">=</span>fh)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>dartsxgb.fit(y_train, fh<span class="op">=</span>fh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>dartslr.fit(y_train, fh<span class="op">=</span>fh)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>dartsr.fit(y_train, fh<span class="op">=</span>fh)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>dartsxgb.fit(y_train, fh<span class="op">=</span>fh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Support for Torch based models not available. To enable them, install "darts", "u8darts[torch]" or "u8darts[all]" (with pip); or "u8darts-torch" or "u8darts-all" (with conda).</code></pre>
 </div>
@@ -619,10 +617,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>darts_weather_xgb <span class="op">=</span> copy.deepcopy(dartsxgb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-15" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># fitting the models</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>darts_weather_lr.fit(target_df)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>darts_weather_r.fit(target_df)</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>darts_weather_xgb.fit(target_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>darts_weather_lr.fit(target_df)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>darts_weather_r.fit(target_df)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>darts_weather_xgb.fit(target_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
 <style>#sk-4c736cb8-dd19-4e3d-864c-48282a351541 {
     /* Definition of color scheme common for light and dark mode */
@@ -962,13 +959,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>preds_dartsxgb <span class="op">=</span> dartsxgb.predict(fh<span class="op">=</span>pred_fh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-19" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># printing the predictions</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DartsLinearRegressionModel predictions"</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_dartslr)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DartsRegressionModel predictions"</span>)</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_dartsr)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DartsXGBModel predictions"</span>)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_dartsxgb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DartsLinearRegressionModel predictions</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_dartslr)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">DartsRegressionModel predictions</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_dartsr)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">DartsXGBModel predictions</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_dartsxgb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>DartsLinearRegressionModel predictions
 1959    65651.834793
@@ -994,13 +990,12 @@ Freq: Y-DEC, Name: TOTEMP, dtype: float32</code></pre>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>preds_weather_darts_xgb <span class="op">=</span> darts_weather_xgb.predict(fh<span class="op">=</span>pred_fh)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="cell-22" class="cell" data-execution_count="11">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># printing the predictions</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DartsLinearRegressionModel predictions</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_weather_darts_lr)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">DartsRegressionModel predictions</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_weather_darts_r)</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">DartsXGBModel predictions</span><span class="ch">\n</span><span class="st">"</span>)</span>
-<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_weather_darts_xgb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"DartsLinearRegressionModel predictions</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_weather_darts_lr)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">DartsRegressionModel predictions</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_weather_darts_r)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">DartsXGBModel predictions</span><span class="ch">\n</span><span class="st">"</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(preds_weather_darts_xgb)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>DartsLinearRegressionModel predictions
 
@@ -1031,7 +1026,7 @@ Freq: 10min, Name: p (mbar), dtype: float32</code></pre>
 </section>
 <section id="conclusion" class="level3">
 <h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
-<p>In this notebook, we demonstrate how you can simply perform time series forecasting using the <code>darts</code> models through the <code>sktime</code> interface. We have shown how to fit the models on the <code>load_longley</code> and <code>darts.datasets</code> Weather dataset and make predictions. For more details on sktime interface to darts, please refer to the <a href="https://www.sktime.net/en/stable/api_reference/forecasting.html#direct-and-recursive-3rd-party">sktime-darts</a> documentation.</p>
+<p>In this notebook, we demonstrate how you can simply perform time series forecasting using the <code>darts</code> models through the <code>sktime</code> interface. We have shown how to fit the models on the <code>load_longley</code> and <code>darts.datasets</code> Weather dataset and make predictions. For more details on sktime interface to darts, please refer to the <a href="https://www.sktime.net/en/stable/api_reference/forecasting.html#direct-and-recursive-3rd-party">sktime darts adapters</a> documentation.</p>
 </section>
 <section id="references" class="level3">
 <h3 class="anchored" data-anchor-id="references">References</h3>
@@ -1039,9 +1034,6 @@ Freq: 10min, Name: p (mbar), dtype: float32</code></pre>
 <li><a href="https://www.sktime.net/en/stable/index.html">sktime</a></li>
 <li><a href="https://unit8co.github.io/darts/index.html">darts</a></li>
 </ul>
-</section>
-<section id="back-to-the-top" class="level3">
-<h3 class="anchored" data-anchor-id="back-to-the-top"><a href="#Darts-Regression-models-for-time-series-forecasting-using-sktime">Back to the top</a></h3>
 
 
 </section>
