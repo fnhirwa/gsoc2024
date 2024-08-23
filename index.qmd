@@ -15,7 +15,7 @@ Scaling PyTorch backend and Darts integration
 
 I spent the whole summer working on the mission of unifying machine learning with time series under the project entitled **Scaling backends, foundation models, PyTorch, darts and pytorch-forecasting with sktime** Where I mainly worked on integrating the darts Regression models, PyTorch implemented classification models, and deep diving into the structure of deep learning interface of sktime, debugging errors and suggesting improvements to the interface. Despite working on the project mentioned above my contributions went to regural software development lifecycle including the bugs fixing in the repository and improvement of development workflow such as implementing linting standards.
 
-### Generally my contribution yielded the following outcomes
+### Key outcomes
 
 * My community engagement made me learn a lot of new skills, and the team working spirit among the organization led to the successful completion of the project.
 * Communicating with my mentors made me grow on a proffessional level and gave me a taste on how working on impactful project should feel.
@@ -26,30 +26,27 @@ I spent the whole summer working on the mission of unifying machine learning wit
 
 ### Technical outcomes of the project
 
-* Completed
+* Proposed project merged Pull requests
 
     - Integration of the darts regression models adapter: [Pull Request](https://github.com/sktime/sktime/pull/6454)
+    - [OSX system dependency installation](https://github.com/sktime/sktime/pull/6926)
+        There was main issue installing libraries like `xgboost` due to `libomp` installation and compiler flags settings.
 
-* In Progress
+* In Progress Proposed project Pull requests
     - Implementation of GRU-based time series classifiers: [Pull Request](https://github.com/sktime/sktime/pull/6952)
     - Migration of MCNN classifier from `sktime-dl` to `sktime`: [Pull Request](https://github.com/sktime/sktime/pull/6763)
-
-* Other Merged Pull Requests
-    - [Fix the colalign functionality to ScipyDist class as specified in the docstrings](https://github.com/sktime/sktime/pull/6110)
-    - [Fix the docs local build failure due to corrupt notebook](https://github.com/sktime/sktime/pull/6426)
-    - [Fix ForecastX when forecaster_X_exogeneous="complement"](https://github.com/sktime/sktime/pull/6433)
-    - [Fix HolidayFeatures crashes if dataframe doesn't contain specified date](https://github.com/sktime/sktime/pull/6550)
-    - [Switch to ruff as linting tool](https://github.com/sktime/sktime/pull/6676)
-    - [Add non-unicode characters check to the linter](https://github.com/sktime/sktime/pull/6807)
-    - [Resolve the issue with diacritics failing to be decoded on Windows](https://github.com/sktime/sktime/pull/6862/files)
 
 ## Work Done
 
 ### Darts Regression models adapter adapter
 
+<button style="font-size: 24px; padding: 10px 20px; background-color: #4CAF50; color: white;">[Examples notebook](https://fnhirwa.github.io/gsoc2024/examples/darts_examples.html)</button>
+
 With sktime now one can quickly interface the darts library. As mentioned from the darts documentation it provides user-friendly forecasting and anomaly detection on time series through various models, and initially the implementation of the regression models adapter in sktime now gives the capability to interface all available regression models from darts that are: [RegressionModel](https://unit8co.github.io/darts/generated_api/darts.models.forecasting.regression_model.html#darts.models.forecasting.regression_model.RegressionModel), [LinearRegressionModel](https://unit8co.github.io/darts/generated_api/darts.models.forecasting.linear_regression_model.html#darts.models.forecasting.linear_regression_model.LinearRegressionModel), and [XGBModel](https://unit8co.github.io/darts/generated_api/darts.models.forecasting.xgboost.html#darts.models.forecasting.xgboost.XGBModel), yet remaining models [LightGBMModel](https://unit8co.github.io/darts/generated_api/darts.models.forecasting.lgbm.html#darts.models.forecasting.lgbm.LightGBMModel), [RandomForest](https://unit8co.github.io/darts/generated_api/darts.models.forecasting.random_forest.html#darts.models.forecasting.random_forest.RandomForest) and [CatBoostModel](https://unit8co.github.io/darts/generated_api/darts.models.forecasting.catboost_model.html#darts.models.forecasting.catboost_model.CatBoostModel) needs an implementation classes as the adapter for these models is already implemented.
 
-* **Challenges and takeaways during implementation**
+
+
+* **Challenges and takeaways**
 
     Getting this pull request merged took a lot of efforts as initially when implementing the adapter there were strange errors on the CI, and handling the dependencies inside `sktime` was problematic initially. After a thorough investigation the main issue was how sktime installs `OSX` dependencies on CI and the [pull request](https://github.com/sktime/sktime/pull/6926) to resolve this issue which addresses the installation of `libomp` and setting the compiler flags properly made it possible to test this adapter on macos runners.
 
@@ -57,7 +54,25 @@ With sktime now one can quickly interface the darts library. As mentioned from t
 
     This task equiped me with the skill of diving into complex issues ranging from regular implementation to the testing environment.
 
-The examples showcasing the use of darts models with sktime can be found in this [notebook](https://fnhirwa.github.io/gsoc2024/examples/darts_examples.html)
+The examples showcasing the use of darts models with sktime can be found in this
+[notebook](https://fnhirwa.github.io/gsoc2024/examples/darts_examples.html)
+
+### Merged pull requests for maintainance work of the project
+
+- [Fix the colalign functionality to ScipyDist class as specified in the docstrings](https://github.com/sktime/sktime/pull/6110)
+    This pull request was aimed to correct the implementation as per the docstring of the ``ScipyDist`` class and it was a better way to get myself familiar with sktime codebase.
+- [Fix the docs local build failure due to corrupt notebook](https://github.com/sktime/sktime/pull/6426)
+    Initially starting the implementation for darts regression models adapter, I faced an issue with building docs locally and I debugged the issue and found the solution to the problem. This Pull request indirectly contributed to the implementation of the darts regression models adapter as I was able to build docs locally before pushing changes for CI runs.
+- [Fix ForecastX when forecaster_X_exogeneous="complement"](https://github.com/sktime/sktime/pull/6433)
+    This Pull request fixed the issue with columns complementation in the ``ForecastX`` class.
+- [Fix HolidayFeatures crashes if dataframe doesn't contain specified date](https://github.com/sktime/sktime/pull/6550)
+    Fixed the issue in crashing the forecaster when passed the dates that are out of the window, instead raising user warnings.
+- Switch to ruff as linting tool
+    Moving our linter to Ruff as it is fast.
+    * [Ruff as linting tool](https://github.com/sktime/sktime/pull/6676)
+    * [Add non-unicode characters check to the linter](https://github.com/sktime/sktime/pull/6807)
+- [Resolve the issue with diacritics failing to be decoded on Windows](https://github.com/sktime/sktime/pull/6862/files)
+    This issue was problematic when writing diactritics in docstring, such as `Félix` and this PR enforced the character encoding to recognize these types of characters when doing `git diff`
 
 ## Work left to be done
 
@@ -65,11 +80,23 @@ The examples showcasing the use of darts models with sktime can be found in this
 
 The [Pull request](https://github.com/sktime/sktime/pull/6952) is in the last stages to be merged, adding final touches to fix the CI errors being raised on macOS runners.
 
+Having GRU classifiers will benefit by leveraging the power of GRU network architecture for univariate time series classifications.
+
 * **Migration of MCNN classifier from `sktime-dl` to `sktime`**
 
 This [Pull Request](https://github.com/sktime/sktime/pull/6763) was put on hold due to the dependency conflict between `TensorFlow` and `pandas` as mentioned in this [Issue](https://github.com/sktime/sktime/issues/6826).
 
 The above mentioned ongoing tasks includes to address the suggested refactor of the deep learning facing classes in sktime, and continous maintainance of impelemented modules to continue the support of open-source. This means that even though my GSoC period is coming to an end I will continue to contribute to the sktime project and interacting with the community.
+
+## What's next
+
+The first thing to do after the completion of the GSoC program, is to get the ongoing Pull Requests merged. As I am planning to stick around sktime I plan to start working on the rework of the Deep Learning submodule, by proposing the design document to have well organized roadmap for the deep learning interface of sktime.
+
+I initially joined sktime with plan to deep dive into the research and methodology, I am going to work on that in the field of deep learning for time series classification.
+
+Sktime is taking over the `pytorch-forecasting` library as the main maintainer, my plan it to get involved in the maintainance activities of the library.
+
+I plan to continue contributing to sktime in terms of code and community growth by participating in community activities and interacting with community members on discord.
 
 ## Appreciation
 
